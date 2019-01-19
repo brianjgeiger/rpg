@@ -1,8 +1,8 @@
 {
   "name": "rpg",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
-  "description": "Small description for rpg goes here",
+  "description": "A collection of generators and tools for running a roleplaying game",
   "repository": "",
   "license": "MIT",
   "author": "",
@@ -12,40 +12,91 @@
   },
   "scripts": {
     "build": "ember build",
+    "lint": "eslint --ext js,ts --max-warnings=0 . && tslint -p . && stylelint 'app/**/*.scss' 'lib/**/*.scss'",
     "lint:hbs": "ember-template-lint .",
     "lint:js": "eslint .",
     "start": "ember serve",
-    "test": "ember test"
+    "test": "ember test",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "linters": {
+      "*.js": "eslint --max-warnings=0",
+      "*.ts": [
+        "eslint --max-warnings=0",
+        "tslint"
+      ],
+      "*.scss": "stylelint",
+      "*.hbs": "ember-template-lint",
+      "app/locales/*/translations.ts": "node bin/run-node-test.js translations",
+      "config/environment.*": "node bin/run-node-test.js config"
+    }
   },
   "devDependencies": {
+    "@centerforopenscience/eslint-config": "^2.0.0",
+    "@ember-decorators/babel-transforms": "^3.1.5",
     "@ember/jquery": "^0.5.2",
     "@ember/optional-features": "^0.6.3",
+    "@fortawesome/ember-fontawesome": "^0.1.9",
+    "@fortawesome/fontawesome-pro": "^5.6.3",
+    "@fortawesome/pro-light-svg-icons": "^5.6.3",
+    "@types/ember": "^3.0.26",
+    "@types/ember-data": "^3.1.3",
+    "@types/ember-qunit": "^3.4.5",
+    "@types/ember-test-helpers": "^1.0.4",
+    "@types/ember-testing-helpers": "0.0.3",
+    "@types/ember__test-helpers": "^0.7.6",
+    "@types/qunit": "^2.5.4",
+    "@types/rsvp": "^4.0.2",
+    "babel-eslint": "^8.2.6",
     "broccoli-asset-rev": "^2.7.0",
     "ember-ajax": "^3.1.0",
     "ember-cli": "~3.7.1",
     "ember-cli-app-version": "^3.2.0",
-    "ember-cli-babel": "^7.1.2",
+    "ember-cli-babel": "^7.2.0",
     "ember-cli-dependency-checker": "^3.0.0",
     "ember-cli-eslint": "^4.2.3",
     "ember-cli-htmlbars": "^3.0.0",
     "ember-cli-htmlbars-inline-precompile": "^1.0.3",
     "ember-cli-inject-live-reload": "^1.8.2",
+    "ember-cli-sass": "^8.0.1",
     "ember-cli-sri": "^2.1.1",
+    "ember-cli-stylelint": "^2.2.0",
     "ember-cli-template-lint": "^1.0.0-beta.1",
+    "ember-cli-typescript": "^2.0.0-beta.3",
+    "ember-cli-typescript-blueprints": "^2.0.0-beta.1",
     "ember-cli-uglify": "^2.1.0",
+    "ember-css-modules": "^1.1.0",
+    "ember-css-modules-sass": "^1.0.1",
     "ember-data": "~3.7.0",
+    "ember-decorators": "^4.0.3",
     "ember-export-application-global": "^2.0.0",
+    "ember-get-config": "^0.2.4",
+    "ember-intl": "^3.5.0",
     "ember-load-initializers": "^1.1.0",
     "ember-maybe-import-regenerator": "^0.1.6",
     "ember-qunit": "^3.4.1",
     "ember-resolver": "^5.0.1",
     "ember-source": "~3.7.0",
+    "ember-template-lint": "^1.0.0",
     "ember-welcome-page": "^3.2.0",
     "eslint-plugin-ember": "^5.2.0",
+    "eslint-plugin-typescript": "^0.14.0",
+    "lint-staged": "^8.1.0",
     "loader.js": "^4.7.0",
-    "qunit-dom": "^0.8.0"
+    "qunit-dom": "^0.8.4",
+    "sass": "^1.16.0",
+    "stylelint-config-css-modules": "^1.3.0",
+    "stylelint-config-sass-guidelines": "^5.3.0",
+    "tslint": "^5.12.1",
+    "tslint-consistent-codestyle": "^1.15.0",
+    "typescript": "^3.2.4",
+    "typescript-eslint-parser": "^21.0.2"
   },
   "engines": {
     "node": "6.* || 8.* || >= 10.*"
+  },
+  "dependencies": {
+    "foundation-sites": "^6.5.1"
   }
 }
