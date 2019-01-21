@@ -1,0 +1,16 @@
+export const races = [
+    '[race:dragonborn][skin:black,blue,brass,bronze,brass,bronze,brass,bronze,brass,bronze,brass,bronze,brass,bronze,brass,bronze,brass,bronze,copper,gold,green,red,silver,white][eyes:silver,gold,copper,black]',
+    '[race:dwarf][skin:pale,dark,bronzed,gray,black][eyes:brown,hazel,blue,green]',
+    '[race:elf][skin:pale,dark,bronzed,black][eyes:brown,hazel,blue,green]',
+    '[race:gnome][skin:pale,dark,bronzed,black][eyes:brown,hazel,blue,green]',
+    '[race:half-elf][skin:pale,dark,bronzed,black][eyes:brown,hazel,blue,green]',
+    '[race:halfling][skin:pale,dark,bronzed,black][eyes:brown,hazel,blue,green]',
+    '[race:half-orc][skin:blue,lavender,green][eyes:black,brown,blue,red,green]',
+    '[race:human][skin:pale,dark,bronzed,gray,black][eyes:brown,hazel,blue,green]',
+    '[race:tiefling][skin:blue,lavender,pink,red,black,yellow][eyes:black,brown,blue,red,green]',
+    '[race:genasi][skin:red,green,blue,gray][eyes:black,brown,blue,red,green]',
+    '[race:changling (human-presenting)][skin:pale,dark,bronzed,gray,black][eyes:brown,hazel,blue,green]',
+    '[race:kalashtar][skin:pale,dark,bronzed,gray,black][eyes:brown,hazel,blue,green]',
+    '[race:shifter][skin:pale,dark,bronzed,gray,black][eyes:brown,hazel,blue,green]',
+    '[race:warforged][skin:iron,steel,bronze,mithril,stone][eyes:green,red,blue,purple,gold]',
+]

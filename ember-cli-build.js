@@ -7,20 +7,20 @@ module.exports = function(defaults) {
         sassOptions: {
             includePaths: [
                 'app/styles/',
-                'node_modules/foundation-sites/scss/',
+                'node_modules/bourbon/core/',
+                'node_modules/bourbon-neat/core',
             ],
         },
         babel: {
             sourceMaps: 'inline',
         },
         sourcemaps: {
-            enabled: true,
+            enabled: false,
             extensions: ['js'],
         },
         'ember-cli-babel': {
             includePolyfill: false,
         },
-
     });
 
     // Use `app.import` to add additional libraries to the generated

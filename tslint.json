@@ -1,13 +1,13 @@
 {
   "linterOptions": {
     "exclude": [
-        "**/*.js"
+      "**/*.js"
     ]
   },
   "extends": [
-      "tslint:recommended",
-      "tslint-consistent-codestyle",
-      "tslint-eslint-rules"
+    "tslint:recommended",
+    "tslint-consistent-codestyle",
+    "tslint-eslint-rules"
   ],
   "jsRules": {},
   "rules": {
@@ -16,7 +16,9 @@
     "member-access": false,
     "no-namespace": [true, "allow-declarations"],
     "interface-name": [true, "never-prefix"],
-    "space-before-function-paren": [true, { "anonymous": "never" }],
+    "space-before-function-paren": [true, {
+      "anonymous": "never"
+    }],
     "object-literal-sort-keys": false,
     "object-literal-key-quotes": [true, "as-needed"],
     "max-classes-per-file": false,
